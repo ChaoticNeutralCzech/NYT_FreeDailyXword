@@ -13,7 +13,7 @@ I might consider making this into a userscript or browser extension but currentl
 1. Get [Redirector](https://github.com/einaregilsson/Redirector) for your browser
 2. Download [Redirector_NYT_FreeDailyXword.json](https://raw.githubusercontent.com/ChaoticNeutralCzech/NYT_FreeDailyXword/main/Redirector_NYT_FreeDailyXword.json) from this repository (just right-click and "Save as...")
 3. Open Redirector's settings and import Redirector_NYT_FreeDailyXword.json (existing redirects won't be overwritten)
-4. Go to https://www.xwordinfo.com/Solve?date=12/31/2023 (with the current date, or use the Calendar button to quickly pick today's date)
+4. Go to https://www.xwordinfo.com/Solve?date=12/31/2023 (with the current date, or use the "Select a different puzzle" button to pick any date)
 
 ## Limitations & workarounds
 
