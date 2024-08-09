@@ -1,0 +1,40 @@
+{
+    "createdBy": "Redirector v3.5.3",
+    "createdAt": "2024-08-09T00:00:00.000Z",
+    "redirects": [
+        {
+            "description": "NYT XwordInfo Request Hack",
+            "exampleUrl": "https://www.xwordinfo.com/JSON/data.ashx?mode=solve&date=12%2F31%2F1023&maxdate=12%2F31%2F2024&track=true",
+            "exampleResult": "https://www.xwordinfo.com/JSON/data.ashx?mode=solve&date=12%2F31%2F2023&maxdate=12%2F31%2F2024&track=false",
+            "error": null,
+            "includePattern": "https://www\\.xwordinfo\\.com/JSON/data\\.ashx\\?mode=solve&date=(\\d+%2F\\d+%2F)10(\\d{2})&maxdate=(.*)&track=true",
+            "excludePattern": "",
+            "patternDesc": "Makes the site request crossword data for 20xx even though it believes the date selected is 10xx",
+            "redirectUrl": "https://www.xwordinfo.com/JSON/data.ashx?mode=solve&date=$120$2&maxdate=$3&track=false",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "xmlhttprequest"
+            ]
+        },
+        {
+            "description": "NYT XwordInfo Address Hack",
+            "exampleUrl": "https://www.xwordinfo.com/Solve?date=12/31/2023",
+            "exampleResult": "https://www.xwordinfo.com/Solve?date=12/31/1023",
+            "error": null,
+            "includePattern": "https:\\/\\/www\\.xwordinfo\\.com/Solve\\?date=(\\d+)/(\\d+)/20(\\d+)",
+            "excludePattern": "",
+            "patternDesc": "Makes the site believe the date selected is 10xx instead of 20xx to pass the \"pre-Shortz\" check",
+            "redirectUrl": "https://www.xwordinfo.com/Solve?date=$1/$2/10$3",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        }
+    ]
+}
